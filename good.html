@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USER-LOG</title>
+    <link rel="stylesheet" href="amaze.css">
+    <script src="https://kit.fontawesome.com/6c0f805cf4.js"></script>
+</head>
+<body>
+    <div class="contain">
+        <ul>
+            <li value="0"><i class="fa-solid fa-house"></i></li>
+            <li value="1"><i class="fa-solid fa-money-bill-trend-up"></i></li>
+            <li value="2"><i class="fa-solid fa-user"></i></li>
+            <div id="circle"><i class="fa-solid fa-money-bill-trend-up"></i></div>
+        </ul>
+    </div>
+
+<script>
+    let lenths = document.getElementsByTagName("li");
+    let circle = document.getElementById("circle");
+ 
+
+    for (lenth of lenths){
+        lenth.onclick = function(){
+
+            for (lenth of lenths){
+                lenth.style.opacity = "1";
+            }
+
+            circle.style.left = (90 * this.value) + "px";
+            circle.innerHTML = (this.innerHTML);
+            this.style.opacity = "0";
+        }
+    }
+</script>
+
+
+</body>
+</html>
